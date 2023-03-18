@@ -23,11 +23,11 @@ fn main() -> anyhow::Result<()> {
         model_resource,
         config_resource,
         vocab_resource,
-        merges_resource, // not used        
+        //merges_resource, // not used        
         device: Device::Cpu,
         repetition_penalty: 1.6,
         min_length: 40,
-        max_length: 128,
+        max_length: Some(128),
         do_sample: true,
         early_stopping: true,
         num_beams: 5,
